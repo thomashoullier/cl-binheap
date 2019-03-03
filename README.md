@@ -1,5 +1,5 @@
 # Binary Heap Common Lisp implementation
-This is an implementation of a binary heap in Common Lisp.
+This is an implementation of a binary heap in Common Lisp. It is very basic and fits in about 100 SLOC. 
 
 ## Implementation details
 I wrote this as a CLOS class. Using the binary heap object is really straightforward. Please see the file `example.lisp` for detailed examples. This was tested using SBCL 1.4.4.
