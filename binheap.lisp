@@ -122,3 +122,6 @@ and left to right."
                   (if (< ind n)
                       (format t "~a " (aref arr ind))))
             (terpri t)))))
+
+(defmethod size ((tree heap))
+  (length (vec tree)))

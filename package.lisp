@@ -4,4 +4,5 @@
   (:export #:make-heap
            #:insert
            #:extract
-           #:print-tree))
+           #:print-tree
+           #:size))
