@@ -1,9 +1,8 @@
 (defsystem binheap
-  :name "my-system"
+  :name "binheap"
   :version "0.1"
   :author "karl"
-  :license "MIT"
+  :license "UNLICENSE"
   :description "Binary Heap implementation"
-  ;;:serial t
   :components ((:file "package")
                (:file "binheap" :depends-on ("package"))))
