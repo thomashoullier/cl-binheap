@@ -1,11 +1,7 @@
 ;;;; Simple tests for validating binheap.
 
 ;;; Loading the library, adjust the paths to your own directories.
-(if (not (member #p"~/portacle/projects/"
-                 asdf:*central-registry*))
-    (push #p"~/portacle/projects/"
-          asdf:*central-registry*))
-(ql:quickload :binheap)
+(asdf:load-system :binheap)
 
 ;;; Validation
 (format t "Creating empty or small binary heaps:...")
