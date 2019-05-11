@@ -2,11 +2,7 @@
 
 ;;; Loading the library, adjust the paths to your own directories.
 ;;; Can also be done by loading the source files directly.
-(if (not (member #p"~/portacle/projects/"
-                 asdf:*central-registry*))
-    (push #p"~/portacle/projects/"
-          asdf:*central-registry*))
-(ql:quickload :binheap)
+(asdf:load-system :binheap)
 
 ;;; Max-heaps
 ;; Let's build a heap of integers ordered from biggest to smallest.
