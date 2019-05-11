@@ -2,7 +2,7 @@
 This is an implementation of a binary heap in Common Lisp. It is very basic and fits in about 100 SLOC. 
 
 ## Implementation details
-I wrote this as a CLOS class. Using the binary heap object is really straightforward. This was tested using SBCL 1.4.4.
+I wrote this as a CLOS class. Using the binary heap object is really straightforward. This was tested using SBCL 1.5.2.
 Here is the `example.lisp` file:
 ```common-lisp
 ;;; Max-heaps
