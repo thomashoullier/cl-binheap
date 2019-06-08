@@ -6,7 +6,7 @@
 ;;; Validation
 (format t "  -- Testing binheap --~%")
 (format t "Creating empty or small binary heaps:... ")
-(dotimes (it 10 t)
+(dotimes (it 10)
   (let ((arr (make-array it :fill-pointer it)))
     (binhp:make-heap arr #'>=)))
 (format t "OK~%")
@@ -48,6 +48,6 @@
         (format t "Building a max-heap of ~a double-floats:~%" nelem)
         (time (setf hp (binhp:make-heap arr #'>=)))
         (format t "Popping a max-heap of ~a double-floats:~%" nelem)
-        (time (dotimes (it nelem t) (binhp:extract hp)))
+        (time (dotimes (it nelem) (binhp:extract hp)))
         (format t "Reinserting ~a double-floats:~%" nelem)
-        (time (dotimes (it nelem t) (binhp:insert hp (random 100d0))))))
+        (time (dotimes (it nelem) (binhp:insert hp (random 100d0))))))
