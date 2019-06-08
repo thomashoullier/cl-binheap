@@ -55,9 +55,8 @@ Here is the `example.lisp` file:
 (terpri t)
 ;; => Jacques Jean Luc Paul Pierre
 ```
-## Contact
-If you are an experienced Lisper happening to have stumbled across this repository and if you have time, then I would greatly appreciate feedback (see email on my profile) on anything at all: coding practices, corrections and optimizations etc.
-
+## Notes
+This is a simple implementation. It is not thread-safe.
 ## References
   - https://en.wikipedia.org/wiki/Binary_heap
   - https://opendatastructures.org/versions/edition-0.1e/ods-java/10_1_BinaryHeap_Implicit_Bi.html
