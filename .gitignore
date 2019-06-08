@@ -1,2 +1,4 @@
 # Ignore SBCL compiled files.
 *.fasl
+
+*.lisp~
