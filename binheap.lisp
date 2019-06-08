@@ -41,7 +41,7 @@ Sub-method."
   ;; node.
   ;; Parent nodes are the ones from 0 to floor{n-2 / 2} included.
   (loop for ind from (floor (/ (- (length (vec tree)) 2) 2)) downto 0 do
-        (down-heap tree ind)))
+    (down-heap tree ind)))
 
 (defmethod insert ((tree heap) newkey)
   "Push a new element to the heap.
@@ -61,9 +61,9 @@ I: * Heap instance.
       (loop while (and (not (= ind 0))
                        (not (funcall test (aref arr parind)
                                      (aref arr ind)))) do
-            (rotatef (aref arr parind) (aref arr ind))
-            (setf ind parind)
-            (setf parind (floor (/ (1- ind) 2)))))))
+	       (rotatef ( aref arr parind) (aref arr ind))
+	       (setf ind parind)
+	       (setf parind (floor (/ (1- ind) 2)))))))
 
 (defmethod down-heap ((tree heap) ind)
   "Perform the down-heap operation. Move the parent node at 'ind' downwards
@@ -117,11 +117,11 @@ and left to right."
       ;; The heap is already ordered by level. And each level is in the right
       ;; order.
       (loop for level from 0 upto h do
-            (loop for ind from (1- (expt 2 level))
-                  below (1- (expt 2 (1+ level))) do
-                  (if (< ind n)
+	(loop for ind from (1- (expt 2 level))
+		below (1- (expt 2 (1+ level))) do
+                  (when (< ind n)
                       (format t "~a " (aref arr ind))))
-            (terpri t)))))
+	(terpri t)))))
 
 (defmethod size ((tree heap))
   (length (vec tree)))
