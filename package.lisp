@@ -6,4 +6,5 @@
            #:extract
            #:print-tree
            #:size
-	   #:peek))
+	   #:peek
+	   #:peek-second))

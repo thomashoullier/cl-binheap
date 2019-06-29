@@ -129,3 +129,11 @@ and left to right."
 (defmethod peek ((tree heap))
   (with-slots ((arr vec)) tree
     (aref arr 0)))
+
+(defmethod peek-second ((tree heap))
+  (with-slots ((arr vec)
+	       (pred test)) tree
+    (when (= 2 (size tree)) (return-from peek-second (aref arr 1)))
+    (if (funcall pred ( aref arr 1) (aref arr 2))
+	(aref arr 1)
+	(aref arr 2))))

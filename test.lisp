@@ -13,7 +13,7 @@
 
 (format t "Simple heaps and operations:... ")
 (loop for test in (list #'>= #'<=) do
-      (loop for nelem from 10 upto 50 do
+      (loop for nelem from 2 upto 50 do
             (let ((arr (make-array nelem :fill-pointer nelem))
                   (arrval (make-array nelem))
                   (hp nil))
@@ -24,6 +24,7 @@
               (setf hp (binhp:make-heap arr test))
 	      ;; Test the peek
 	      (assert (= (binhp:peek hp) (aref arrval 0)))
+	      (assert (= (binhp:peek-second hp) (aref arrval 1)))
               ;; Now pop all the elements and verify that we get the right order
               (loop for ind from 0 below nelem do
                 (assert (= (binhp:extract hp) (aref arrval ind))))
