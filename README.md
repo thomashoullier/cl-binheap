@@ -4,6 +4,7 @@ This is an implementation of a binary heap in Common Lisp. It is very basic and 
 ## Implementation details
 I wrote this as a CLOS class. Using the binary heap object is really straightforward. This was tested using SBCL 1.5.2.
 Here is the `example.lisp` file:
+
 ```common-lisp
 ;;; Max-heaps
 ;; Let's build a heap of integers ordered from biggest to smallest.
@@ -26,8 +27,12 @@ Here is the `example.lisp` file:
 ;; 6 
 ;; 5 3.5 
 ;; 2 4 1 3
-
 ;; The new element fits in the heap.
+
+;; You can peek to get the first elements without modifying the heap.
+(format t "~a ~a~%" (binhp:peek *heap*) (binhp:peek-second *heap*))
+;; => 6 5
+
 ;; You can pop elements to get the successive biggest of the heap:
 (loop for it from 0 below (length *arr*) do
       (format t "~a " (binhp:extract *heap*)))
@@ -55,8 +60,10 @@ Here is the `example.lisp` file:
 (terpri t)
 ;; => Jacques Jean Luc Paul Pierre
 ```
+
 ## Notes
 This is a simple implementation. It is not thread-safe.
+
 ## References
   - https://en.wikipedia.org/wiki/Binary_heap
   - https://opendatastructures.org/versions/edition-0.1e/ods-java/10_1_BinaryHeap_Implicit_Bi.html

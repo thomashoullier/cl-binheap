@@ -25,8 +25,12 @@
 ;; 6 
 ;; 5 3.5 
 ;; 2 4 1 3
-
 ;; The new element fits in the heap.
+
+;; You can peek to get the first elements without modifying the heap.
+(format t "~a ~a~%" (binhp:peek *heap*) (binhp:peek-second *heap*))
+;; => 6 5
+
 ;; You can pop elements to get the successive biggest of the heap:
 (loop for it from 0 below (length *arr*) do
       (format t "~a " (binhp:extract *heap*)))
