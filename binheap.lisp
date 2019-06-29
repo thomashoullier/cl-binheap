@@ -61,7 +61,7 @@ I: * Heap instance.
       (loop while (and (not (= ind 0))
                        (not (funcall test (aref arr parind)
                                      (aref arr ind)))) do
-	       (rotatef ( aref arr parind) (aref arr ind))
+	       (rotatef (aref arr parind) (aref arr ind))
 	       (setf ind parind)
 	       (setf parind (floor (/ (1- ind) 2)))))))
 
