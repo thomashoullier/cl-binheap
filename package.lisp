@@ -5,4 +5,5 @@
            #:insert
            #:extract
            #:print-tree
-           #:size))
+           #:size
+	   #:peek))

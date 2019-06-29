@@ -125,3 +125,7 @@ and left to right."
 
 (defmethod size ((tree heap))
   (length (vec tree)))
+
+(defmethod peek ((tree heap))
+  (with-slots ((arr vec)) tree
+    (aref arr 0)))
